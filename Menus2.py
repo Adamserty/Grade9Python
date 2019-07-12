@@ -16,7 +16,7 @@
 #Generate Receipt
 #Display Receipt
 #Mail Receipt To Buyer
-#Generate Profit Analysis Repor
+#Generate Profit Analysis Report
 
 import random
 
