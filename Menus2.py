@@ -16,23 +16,11 @@
 #Generate Receipt
 #Display Receipt
 #Mail Receipt To Buyer
-#Generate Profit Analysis Report
-
-
+#Generate Profit Analysis Repor
 
 import random
 
-
-
-
-
-
-shopping_basket = {}
-
-
-
-
-
+shopping_basket = {} #Initialize the shopping basket
 
 print("Hello Buddy, Welcome To The Food Place!!!")
 
@@ -47,8 +35,6 @@ FOOD = {1 : "French Fries 5.25",
         9 : "Large Pizza with Extra Toppings",
         10 : "Garlic Bread"
         }
-
-
 
 print("""
 FOOD PLACE OPTIONS
@@ -87,12 +73,6 @@ while option != 0:
 
 else:
     print("Food Place Menu Closed.")
-        
-        
-        
-
-
-
 #input("\nPress enter to see a list of your options.")
 
 
