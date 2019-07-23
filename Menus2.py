@@ -33,6 +33,15 @@ MediumPizzaExtraPrice = 11.00
 LargePizzaPrice = 12.00
 LargePizzaExtraPrice = 14.50
 GarlicPrice = 4.50
+OPTIONS =  """
+Welcome To The Food Place
+-------------------------
+1 : Select Food Item
+2 : Remove Food Item
+3 : View Chosen Food Items
+4 : View Total Price And Profit
+0 : Exit Program
+"""
 
 print("Hello Buddy, Welcome To The Food Place!!!")
 
@@ -58,50 +67,52 @@ FOOD = {1 : "French Fries" ,
         "GarlicPrice" : "$4.50" 
         }
 
-print("""
-FOOD PLACE OPTIONS
-------------------
-1:Select Food Item
-2:Remove Food Item
-3:View Chosen Food Items
-4:View Total Price and Profit Percentage
-0:Exit Program
+print(OPTIONS)
 
-""")
 
     
             
 
-option = int(input("Enter an option: "))
+option = input("Enter an option: ")
 
 while option != 0:
         if option == 1:
             for key,val in FOOD.items():
                 print(key, "->", val)
-            item = input("Enter a Food Item Number: ")
-            item1 = int(input("Enter Price of Food Item "))
+            item = input("Enter a Food Item Number :")
+            item1 = float(input("Enter Price of Food Item :"))
+            cent = float(input("Enter Profit Percentage As A Decimal :"))
             qnty = int(input("Enter the quantity desired: "))
             shopping_basket[item] = qnty
             price = item1 * qnty
             total_price = int(total_price) + int(price)    
-            percent = 0.1 * total_price
+            percent = cent * total_price
+            print(OPTIONS)
             
             
 
         elif option == 2:
             item = input("Enter an item: ")
             del(shopping_basket[item])
+            print(OPTIONS)
 
         elif option == 3:
             for item in shopping_basket:
                 print(item, ":",shopping_basket[item])
+                print(OPTIONS)
 
         elif option == 4:
                 print("Total Price In Basket : $" + str(total_price) + ".00")
                 print("Profit is : $" + str(percent))
+                print(OPTIONS)
                                       
         elif option != 0:
-                print("Invalid Response.")
+                #print("Invalid Response.")
+                print(OPTIONS)
+
+        elif str(option) == "":
+                #print("Invalid Response")
+                print(OPTIONS)
 
         option = int(input("\n\nEnter an option: "))
 
