@@ -73,7 +73,7 @@ print(OPTIONS)
     
             
 
-option = input("Enter an option: ")
+option = int(input("Enter an option: "))
 
 while option != 0:
         if option == 1:
@@ -107,11 +107,11 @@ while option != 0:
                 print(OPTIONS)
                                       
         elif option != 0:
-                #print("Invalid Response.")
+                print("Invalid Response.")
                 print(OPTIONS)
 
         elif str(option) == "":
-                #print("Invalid Response")
+                print("Invalid Response")
                 print(OPTIONS)
 
         option = int(input("\n\nEnter an option: "))
